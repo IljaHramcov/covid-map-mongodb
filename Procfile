@@ -1,0 +1,1 @@
+worker: python backend_main.py
