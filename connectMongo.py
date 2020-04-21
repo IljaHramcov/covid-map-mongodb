@@ -1,8 +1,9 @@
 from pymongo import MongoClient
 
-def connect(user, password):
+def connect(connectionString):
+    # Get first your connection String.
     # connect to MongoDB, change the << MONGODB URL >> to reflect your own connection string
-    client = MongoClient('mongodb+srv://'+user+':'+password+'@mongodb-af1em.gcp.mongodb.net/test?retryWrites=true&w=majority')
+    client = MongoClient(connectionString)
     db=client
     print('Successfully connected to MongoDB.')
     return db

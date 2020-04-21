@@ -3,6 +3,7 @@ from urllib.request import Request
 
 def getData(url):
 
+    #You have to fake a browser here. Otherwise you will have no permission.
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 
     openrUrl = urllib.request.urlopen(req)
