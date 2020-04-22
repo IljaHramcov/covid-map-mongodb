@@ -1,5 +1,6 @@
 import urllib.request, json 
 from urllib.request import Request
+from datetime import date
 
 def getData(url):
 
@@ -10,6 +11,10 @@ def getData(url):
     if(openrUrl.getcode()==200):
         data = openrUrl.read()
         jsonData = json.loads(data)
+
+        today = date.today()
+        d1 = today.strftime("%Y%m%d")
+
         print("Successfully loaded Json.")
     else:
         print("Error receiving data", openrUrl.getcode())
